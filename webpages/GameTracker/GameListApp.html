@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Game Tracker</title>
+</head>
+<body>
+  <div class="header">
+    <h1>My Game List</h1>
+  </div>
+
+  <div class="container">
+    <div class="form-container">
+      <h2>Add Game</h2>
+      <form id="gameForm">
+        <label for="gameTitle">Game Title:</label>
+        <input type="text" id="gameTitle" required>
+
+        <label for="progress">Progress (%):</label>
+        <input type="number" id="progress" min="0" max="100" required>
+
+        <label for="currentLocation">Current Location:</label>
+        <input type="text" id="currentLocation" required>
+
+        <label for="rating">Rating:</label>
+        <input type="number" id="rating" min="1" max="10" required>
+
+        <button type="button" onclick="addGame()">Add Game</button>
+      </form>
+    </div>
+
+    <div class="game-list-container">
+      <h2>Game List</h2>
+      <div id="gameList">
+        <!-- Game entries will be displayed here -->
+      </div>
+    </div>
+
+    <button type="button" onclick="getRandomRecommendation()">What should I play? </button>
+
+    <!-- Container for recommendations -->
+    <div id="recommendationContainer"></div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
