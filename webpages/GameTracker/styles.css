@@ -28,6 +28,7 @@ body {
 
 h2 {
   color: #333;
+  margin: 20px auto;
 }
 
 .form-container,
@@ -87,4 +88,11 @@ button:hover {
   input, button {
     width: 100%;
   }
+}
+
+.game-entry img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+  max-height: 150px;
 }

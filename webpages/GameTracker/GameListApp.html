@@ -13,7 +13,6 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-5E3H8WFTT2');
 </script>
 
@@ -29,7 +28,7 @@
         <label for="gameTitle">Game Title:</label>
         <input type="text" id="gameTitle" required>
 
-        <label for="progress">Progress (%):</label>
+        <label for="progress">Progress Complete (%):</label>
         <input type="number" id="progress" min="0" max="100" required>
 
         <label for="currentLocation">Current Location:</label>
@@ -38,8 +37,12 @@
         <label for="rating">Rating:</label>
         <input type="number" id="rating" min="1" max="10" required>
 
+        <label for="imageUrl">Image URL:</label>
+        <input type="text" id="imageUrl" required>
+
         <button type="button" onclick="addGame()">Add Game</button>
       </form>
+
     </div>
 
     <div class="game-list-container">
@@ -50,6 +53,8 @@
     </div>
 
     <button type="button" onclick="getRandomRecommendation()">What should I play? </button>
+
+    <p>Click the recommendation to see what the RNG gods have decided for you to play! Note: One of the above is not like the other</p>
 
     <!-- Container for recommendations -->
     <div id="recommendationContainer"></div>
