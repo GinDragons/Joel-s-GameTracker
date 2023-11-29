@@ -78,39 +78,3 @@ function getRandomRecommendation() {
   // Display the random game as a recommendation in the container
   recommendationContainer.innerHTML = `<p>You should play:</p><div>${randomGame.innerHTML}</div>`;
 };
-
-// Function to save games to localStorage
-function saveGamesToLocalStorage(games) {
-  localStorage.setItem('gameList', JSON.stringify(games));
-}
-
-// Function to get games from localStorage
-function getGamesFromLocalStorage() {
-  const storedGames = localStorage.getItem('gameList');
-  return storedGames ? JSON.parse(storedGames) : [];
-}
-
-// Display stored games on page load
-document.addEventListener('DOMContentLoaded', function() {
-  const storedGames = getGamesFromLocalStorage();
-  for (const game of storedGames) {
-    addGameToUI(game);
-  }
-});
-
-// Function to add a new game to the list and update localStorage
-function addGame() {
-  // ... (your existing addGame function)
-
-  // Get existing games from localStorage
-  const storedGames = getGamesFromLocalStorage();
-
-  // Add the new game to the list
-  storedGames.push(newGame);
-
-  // Update localStorage with the modified game list
-  saveGamesToLocalStorage(storedGames);
-
-  // Clear the form fields
-  document.getElementById('gameForm').reset();
-}
